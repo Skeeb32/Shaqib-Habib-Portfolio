@@ -20,25 +20,46 @@
       <!-- Header -->
       <header id="header" class="alt">
         <h1 id="logo">
-          <a href="index.html"><span>Shaqib</span> Habib</a>
+			<script>
+				function startTime() {
+				  var today = new Date();
+				  var h = today.getHours();
+				  var m = today.getMinutes();
+				  var s = today.getSeconds();
+				  m = checkTime(m);
+				  s = checkTime(s);
+				  document.getElementById('txt').innerHTML =
+				  h + ":" + m + ":" + s;
+				  var t = setTimeout(startTime, 500);
+				}
+				function checkTime(i) {
+				  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+				  return i;
+				}
+				</script>
+				</head>
+				
+				<body onload="startTime()">
+				
+				<div id="txt"></div>
         </h1>
         <nav id="nav">
-          <ul>
-            <li class="current">
-              <a href="/resume.html">Resume</a>
-			</li>
-			<li>
-				<a href="/about.html" class="scrolly">About Me</a>
+			<ul>
+			 <li>
+			  <li class="current">
+				<a href="https://github.com/Skeeb32/Shaqib-Habib-Portfolio" target="_blank">Shaqib Habib Portfolio</a>
 			  </li>
-            <li class="submenu">
-              <a href="#projects" class="scrolly">Projects</a>
-			</li>
-            <li class="submenu">
-				<a href="#cta" class="scrolly">Contact Me</a>
+			  <li class="submenu">
+				<a href="#">Menu</a>
+				<ul>
+				  <li><a href="index.html" class="button primary">Home</a></li>
+				  <li class="current"><a href="about.html">About Me</a></li>
+				  <li><a href="contact.html">Contact</a></li>
+				  <li class="current"><a href="/resume.html" target="_blank">Resume</a></li>
+				</ul>
 			  </li>
-            <!-- <li><a href="#" class="button primary">Sign Up</a></li> -->
-          </ul>
-        </nav>
+			</ul>
+		  </nav>
       </header>
 
       <!-- Banner -->
@@ -51,7 +72,7 @@
           <p>Full Stack <strong>Developer</strong></p>
           <footer>
             <p style="font-weight: 500; text-transform: none;">
-              Full Stack Engineer seeking software development roles while having experience building interactive and responsive User Interfaces and having a passion for Web Development. 
+              Full Stack Engineer looking for my next exciting software development roles while having a passion for web design & front-end development focused on crafting clean & user-friendly experiences.
             </p>
             <!-- <ul class="buttons stacked">
               <li>
@@ -114,6 +135,26 @@
   
 			<div class="row">
 			  <div class="col-6 col-12-narrower">
+				<section id="Chef-Portfolio">
+				  <a href="https://chefportfoliobuildweek.github.io/Chef-Portfolio/ChefPortfolio/" class="image featured" target="_blank"><img
+					  src="images/cp.jpg" alt="Chef Portfolio Website" /></a>
+				  <header>
+					<h3><a href="https://chefportfoliobuildweek.github.io/Chef-Portfolio/ChefPortfolio/index.html">Chef Portfolio Project</a></h3>
+					<h1><a class="button" href="https://github.com/ChefPortfolioBuildWeek/Chef-Portfolio" target="_blank">Github</a></h1>
+				  </header>
+				  <p>
+					In this project with a team of six developers, I collaboratively worked with them and created a chef portfolio where chef's can showcase their work and be hireable. I was responsible for the front-end development, which I built using my HTML and CSS knowledge. 
+					<ul style="text-align: left;">
+					  <li>Designed a mock webpage using only a months worth of knowledge.</li>
+					  <li>Handled the design format and the deployment of the project via Heroku.</li>
+					  <li>Built with HTML, CSS & Less, Mobile  Design.</li>
+					  <li>Built with React, Hooks & Context API, React Router.</li>
+					</ul>
+				  </p>
+				</section>
+			  </div>
+			  
+			  <div class="col-6 col-12-narrower">
 				<section id="Great-Idea">
 				  <a
 					href="https://www.futurehope.net/"
@@ -148,26 +189,8 @@
 				  </p>
 				</section>
 			  </div>
-			  <div class="col-6 col-12-narrower">
-				<section id="Chef-Portfolio">
-				  <a href="https://chefportfoliobuildweek.github.io/Chef-Portfolio/ChefPortfolio/" class="image featured" target="_blank"><img
-					  src="images/cp.jpg" alt="Chef Portfolio Website" /></a>
-				  <header>
-					<h3><a href="https://chefportfoliobuildweek.github.io/Chef-Portfolio/ChefPortfolio/index.html">Chef Portfolio Project</a></h3>
-					<h1><a class="button" href="https://github.com/ChefPortfolioBuildWeek/Chef-Portfolio" target="_blank">Github</a></h1>
-				  </header>
-				  <p>
-					During this project, we worked as a team of six people where each person was responsible for creating their own work and at the end piecing all the pieces of the webpage together. We built a chef portfolio where chef's can showcase their work and be hireable. In this project, we created a website based of HTML and CSS.
-					<ul style="text-align: left;">
-					  <li>Designed a mock webpage using only a months worth of knowledge.</li>
-					  <li>Handled the design format and the deployment of the project via Heroku.</li>
-					  <li>Built with HTML, CSS & Less, Mobile  Design.</li>
-					  <li>Built with React, Hooks & Context API, React Router.</li>
-					</ul>
-				  </p>
-				</section>
-			  </div>
-			  
+
+
 			<div class="row">
 			  <div class="col-6 col-12-narrower">
 				<section id="User-Interface">
@@ -239,7 +262,7 @@
 					</ul>
 
 					<ul class="copyright">
-						<li>&copy; 2020</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2021</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 				</footer>

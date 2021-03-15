@@ -23,12 +23,33 @@
       <!-- Header -->
       <header id="header">
         <h1 id="logo">
-		  <a href="index.html"><span>Network</span>KING </span><span>is key</span> </a>
-        </h1>
+          <script>
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
+            </head>
+            
+            <body onload="startTime()">
+            
+            <div id="txt"></div>
+            </h1>
         <nav id="nav">
           <ul>
             <li class="current">
-              <a href="index.html">Shaqib Habib Portfolio</a>
+              <a href="https://github.com/Skeeb32/Shaqib-Habib-Portfolio" target="_blank">Shaqib Habib Portfolio</a>
             </li>
             <li class="submenu">
               <a href="#">Menu</a>
@@ -38,6 +59,7 @@
                 <li class="current">
                   <a href="contact.html" class="button primary">Contact</a>
                 </li>
+                <li class="current"><a href="/resume.html" target="_blank">Resume</a></li>
               </ul>
             </li>
           </ul>
@@ -50,7 +72,6 @@
           <span class="icon solid fa-envelope"></span>
           <h2>Let's work together!</h2>
 		  <p>Use the form below to get in touch with me.</p><br>
-      <p>Email:<br> shaqib-habib@lambdastudents.com</p>
       <p>Email:<br> shaqib.dev@gmail.com</p>
         </header>
 
@@ -111,7 +132,7 @@ enctype="text/plain" onsubmit="location.href='index.html';" ><input type='hidden
 		</ul>
 
         <ul class="copyright">
-          <li>&copy; 2020</li>
+          <li>&copy; 2021</li>
           <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </footer>

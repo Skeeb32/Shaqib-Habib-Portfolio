@@ -23,14 +23,34 @@
       <!-- Header -->
       <header id="header">
         <h1 id="logo">
-          <a href="index.html"
-            ><span>Home</span></a
-          >
-        </h1>
+          <script>
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
+            </head>
+            
+            <body onload="startTime()">
+            
+            <div id="txt"></div>
+            </h1>
         <nav id="nav">
           <ul>
+			    <li>
             <li class="current">
-              <a href="index.html">Shaqib Habib Portfolio</a>
+              <a href="https://github.com/Skeeb32/Shaqib-Habib-Portfolio" target="_blank">Shaqib Habib Portfolio</a>
             </li>
             <li class="submenu">
               <a href="#">Menu</a>
@@ -40,6 +60,7 @@
                   <a href="about.html" class="button primary">About Me</a>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
+                <li class="current"><a href="/resume.html" target="_blank">Resume</a></li>
               </ul>
             </li>
           </ul>
@@ -92,9 +113,9 @@
                   </p>
                   <p>
                     I wasn't always a computer programmer. After graduating from
-                    Indiana University, Bloomington in 2012, I set my hearts out
+                    Indiana University, Bloomington in 2012, I set my heart out
                     to work in the entertainment industry. I started out as an
-                    intern for an managment company and another at an agency.
+                    intern for an management company and another at an agency.
                     Though two sides of the same coin, I delt with managing the
                     actors and scheduling their daily meetings with my boss or
                     assisting with submitting talent for potential film,
@@ -105,7 +126,7 @@
                   <p>
                     After a year interning, I took a break to travel the world
                     and learned to become more independent. Along my journey, I
-                    discoved skills I needed to tap into more. I was networking,
+                    discovered skills I needed to tap into more. I was networking,
                     communicating with different types of people from all
                     different religions and lifestyles, and learned to enjoy
                     life rather than worrying about what others had to say about
@@ -117,7 +138,9 @@
                     more as an individual. I've helped build communities, worked
                     in the entertainment industry meeting celebrities and making
                     people happy, and learned that a career makes the person
-                    they are if they put their mind to it.
+                    they are if they put their mind to it. I worked in the entertainment industry
+                    on both the agency, management, and production side and I learned these skills 
+                    to switch careers to feed my appitite which lead me down a development path. 
                   </p>
                 </section>
               </div>
@@ -202,10 +225,63 @@
             </div>
           </div>
         </section>
-
         <!-- Two -->
+      <section>
         <section class="wrapper style1 container special">
-          <h2><strong>Work Experience</strong></h2>
+        <h2><strong>Current Work Experience</strong></h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <header>
+                <a href="https://kale.benecure.com/" target="_blank" class="image featured"
+                  ></a>
+                <h3><a href="https://kale.benecure.com/" target="_blank">Benecure</a></h3>
+                <h1><italics>Software Developer, Intern</italics></h1>
+                <a href="https://kale.benecure.com/" target="_blank" class="icons8"
+                ><img
+                  src="images/bene.jpg"
+                  alt="benecure"
+                  width="500"
+                  height="200"
+              /></a>
+              </header>
+              <p>2021-Current</p>
+              <p>
+                Working alongside the CEO and fellow Senior developers, I have made updates accordingly to the clients needs. Along with the backend engineers and design teams, I have launched new features from design to production on time and gathered feedback from past releases.
+
+              </p>
+              <footer></footer>
+            </div>
+            <section class="wrapper style1 container special">
+            <h2><strong>Previous Work Experience</strong></h2>
+            <div class="col-sm">
+              <header>
+                <a href="https://lambdaschool.com/" target="_blank" class="image featured"
+                  ></a>
+                <h3><a href="https://lambdaschool.com/" target="_blank">Lambda School</a></h3>
+                <h1><strong>Support Engineer</strong></h1>
+                <a href="https://lambdaschool.com/" target="_blank" class="icons8"
+                ><img
+                  src="images/lambda2.jpg"
+                  alt="lambdaschool"
+                  width="500"
+                  height="150"
+              /></a>
+              </header>
+              <p>06/2020-09/2020</p>
+              <p>
+                As a Support Engineer for Lambda School, I lead a daily standup with 32 student developers while emulating a real work environment setting with agile methodology, bug fixing, and sharing ideas cohesively. Throughout my time there, I also assisted and supported instructors through daily lectures by answering questions, providing additional resources for various computer science topics, and developed supplemental lectures. While also reviewing code before deploying student projects to production, I prioritized quality and efficiency over how quick a project should be released.
+              </p>
+              <footer></footer>
+            </div>
+          </div>
+        </div>
+              </section>
+      </section>
+
+        <!-- Three -->
+        <section class="wrapper style1 container special">
+          <h2><strong>Past Work Experience</strong></h2>
           <div class="row">
             <div class="col-4 col-12-narrower">
               <section>
@@ -339,7 +415,7 @@
         </ul>
 
         <ul class="copyright">
-          <li>&copy; 2020</li>
+          <li>&copy; 2021</li>
           <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </footer>
